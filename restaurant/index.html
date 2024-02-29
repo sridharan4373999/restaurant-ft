@@ -1,0 +1,1227 @@
+<!Doctype html>
+<html>
+    <head>
+               <title>Restaurant</title>
+               <style>
+                    *
+                       {
+                          margin:0px;
+                          padding:0px;
+                          
+                        }
+body
+{
+overflow-x:hidden;
+}
+                     html
+                         {
+                            scroll-behavior:smooth;
+                          }
+               header{
+                            background:white;
+                            position:fixed;
+                            width:100%;
+                            display:flex;
+                            justify-content:space-between; 
+	
+                            padding-left:130px;
+                            z-index:6;
+                           }
+                        
+                 #logo img
+                                  {
+                                     display:flex;
+                                     height:25px;
+                                     width:auto;
+                                     margin-top:15px;
+                                  }          
+                     nav ul
+                        {
+                           list-style:none;
+                           display:flex;
+                            margin:0px;
+                          padding:0px;
+                           overflow:hidden;  
+                           margin-right:280px;
+                          
+                         }
+                     ul li
+                         {
+                              padding:16px;  
+                              display:block; 
+                         }
+                     ul li a
+                         {
+                             text-decoration:none; 
+                            font-family: 'Rubik', sans-serif;
+                             font-size:.6rem; 
+                             color:black;
+                          }
+                        ul li a:hover
+                          {
+                             color:#f76959;
+                           }
+                       
+                       @media all and (max-width:480px)
+                           {
+                               nav ul
+                                    {
+                                            display:flex;
+                                            flex-direction:column;
+                                            margin-left:0px;
+                                     }
+                                 #logo img{
+                                               margin-left:-120px;
+                                               
+                                           }
+                        
+                            }
+                            @media all and (max-width:200px)
+                              {
+                            nav ul
+                                    {
+                                            margin-left:-50px;
+                                     }
+                               }
+                     .home
+                            {
+                             height:840px;
+                             background-size:100% 100%;
+                             background-repeat:no-repeat;       
+                             background-image: url('./img/bg1.webp');
+                             display:flex;
+                              }
+                     .welcome 
+                              { 
+                                 position:absolute;
+                                 width:700px;
+                                 top:260px;
+                                 color:white;
+                                 left:80px;
+                                 display:block;
+                                 height:80vh;
+                                 z-index:2;
+                               }
+                        .line1
+                                {
+                                   letter-spacing:3.5px; 
+                                   font-size:22px; 
+                                   font-family: 'Roboto', sans-serif;
+                                 }
+                        .line2
+                                 {
+                                    font-size:40px;   
+                                    line-height:110px;
+                                    font-family: 'Rubik', sans-serif;                                       
+                                  }
+                          
+                            .line3
+                                 {
+                                       font-family: 'Roboto', sans-serif;
+                                       font-size:15px;
+                                  }
+                             .line4
+                                 {
+                             font-family: 'Rubik', sans-serif; 
+                                   font-size:16px;
+                                   margin:10px -3px;;
+                                   height:50px;
+                                   width:200px;
+                                   border:none;
+                                   border-radius:50px;
+                                   background:#f76959;
+                                   color:white;
+                                  } 
+                                .line4:hover
+                                  {
+                                   background:transparent;
+                                   }
+               @media all and (max-width:790px)
+                   {
+                         .welcome
+                             {
+                                width:450px;
+                              }
+                         .line2
+                                 {
+                                    line-height:70px;
+                                     
+                                  }
+                    }
+                   .dish
+                       {
+                            height:cover;
+                            width:100%;
+                             background:white;
+                             
+                        }               
+                     .dish_article
+                        {
+                           position:relative;
+                           text-align:center;
+                           top:80px;
+                         }        
+                       .main
+                         {
+                            font-size:40px;
+                                font-family: 'Rubik', sans-serif;  
+                         }
+                       .main1
+                          {
+                              font-family: 'Roboto', sans-serif;
+                              font-size:15px;
+                              line-height:24px;
+                           }
+                         .items
+                           { 
+                             position:relative;
+                             height:400px;
+                             margin:5px;
+                             padding:5px;
+                             top:142px;    
+                             border:1px solid white;                         
+                             display:flex;
+                             justify-content:space-evenly;
+                             flex-wrap:wrap;
+                             /*overflow:hidden;*/
+                            }
+                          .one,.two,.thr
+                            {
+                               height:400px;
+                               width:320px;
+                                border:1px solid white;
+                               /*overflow:hidden*/;
+                             }
+                            .d1
+                             {
+                                display:flex;
+                                justify-content:center;
+                                
+                                transition-duration:1s;
+                              }
+                             .dname
+                             {
+                                margin-top:18px;
+                               font-family: 'Rubik', sans-serif;  
+                               font-size:20px;
+                             }
+                           .dpara
+                            {
+                             margin-top:13px;
+                             font-family: 'Roboto', sans-serif;
+                               font-size:15px;
+                             }
+                             .d1
+                             {
+                               position:relative;
+                               /* border: solid;   */
+                              overflow: hidden;
+                             }
+                             .d1 > img
+                             {
+                              transform:scale(1.2)
+                             }
+                            /* .d1 > img
+                             {
+                              transition: 0.5s;
+                             } */ 
+                           .d1 > img:hover
+                             {
+                                overflow:hidden;
+                               animation-name:imgdesign;
+                               animation-duration:.7s; 
+                              }
+                              @keyframes imgdesign
+                              {
+                                0%
+                                {transform:rotate(10deg);
+                                 
+                                }
+                                
+                                100%
+                                {
+                                  transform:scale(1.4);}
+                              }
+                              
+                            .dname:hover
+                              {
+                                 color:red;
+                              }
+                           .youtube
+                               {
+                                  position:relative;
+                                  top:170px;
+                                  background-image:url('./img/bg2.webp');
+                                  height:100vh;
+                                  background-size:100% 100%;
+                                }
+                              .play
+                                 {
+                                   display:flex;
+                                   justify-content:center;
+                                   position:relative;
+                                   top:270px;
+                                  }
+                              .play_name
+                                  {
+                                   display:flex;
+                                   justify-content:center;
+                                   position:relative;
+                                   top:280px; 
+                                   left:20px;
+                                   color:white;
+                                   font-family: 'Rubik', sans-serif;  
+                                  }
+                              .play_para
+                                  {
+                                   display:flex;
+                                   justify-content:center;
+                                   position:relative;
+                                   top:300px; 
+                                   color:white;
+                                   font-family: 'Rubik', sans-serif;  
+                                  }
+                            @media all and (max-width:996px)
+                                  {
+                                        .youtube
+                                         {
+                                           position:relative;
+                                           top:500px;
+                                          }
+                                  }
+                            @media all and (max-width:676px)
+                                   {
+                                        .youtube
+                                         {
+                                           position:relative;
+                                           top:900px;
+                                          }
+                                  }
+                            .time
+                                  {
+                                           position:relative;
+                                           top:240px;
+                                           height:200px;
+                                           display:flex;
+                                           border:1px solid ;
+                                           border:none;
+                                           justify-content:space-evenly;
+                                           padding-left:5px;  
+                                           flex-wrap:wrap;                                                               
+                                  }
+                             .t1,.t2,.t3,.t4
+                                   {
+                                      height:200px;
+                                      width:200px;
+                                    }
+                             .fname
+                                   {
+                               margin-top:13px;
+                               font-family: 'Rubik', sans-serif;  
+                               font-size:18px;
+                                    }
+                            @media all and (max-width:996px)
+                                  {
+                                        .time
+                                         {
+                                           position:relative;
+                                           top:500px;
+                                          }
+                                  }
+                            @media all and (max-width:676px)
+                                   {
+                                        .time
+                                         {
+                                           position:relative;
+                                           top:900px;
+                                          }
+                                  }
+                             .feature
+                                  {
+                                     position:relative;
+                                     top:300px;
+                                  }
+                            .feature_article
+                                  {
+                                      display:flex;
+                                      justify-content:center;
+                                      font-family: 'Rubik', sans-serif; 
+                                      font-size:25px; 
+                                  }
+                              .fer
+                                  {
+                                     position:relative;
+                                     top:20px;
+                                      display:flex;
+                                      border:1px solid;
+                                      border:none;
+                                      justify-content:space-evenly;
+                                      align-items:center;
+                                      height:450px;
+                                      flex-wrap:wrap;
+                                   }
+                                .fer1,.fer2
+                                    {
+                                        border:1px solid;
+                                        border:none;
+                                        height:400px;
+                                        width:555px;
+                                     }
+
+                                  .sname
+                                   {
+                                      font-family: 'Rubik', sans-serif; 
+                                     position:relative;
+                                     top:100px; 
+                                    }
+                                  .spara
+                                  {
+                                     position:relative;
+                                     top:100px;
+                                     margin-top:25px;
+                             font-family: 'Roboto', sans-serif;
+                                   }
+                                  .sbutton
+                                    {
+                                   position:relative;
+                                   top:100px;
+                                   margin-top:30px;
+                                   font-family: 'Rubik', sans-serif; 
+                                   font-size:16px;
+                                   height:45px;
+                                   width:170px;
+                                   border:1px solid #f76959;
+                                   border-radius:50px;
+                                   background:#f76959;
+                                   color:white;
+                                     }
+                                .sbutton:hover
+                                  {
+                                   background:transparent;
+                                   color:#f76959;
+                                   }
+                               @media all and (max-width:996px)
+                                  {
+                                         .feature
+                                         {
+                                           position:relative;
+                                           top:700px;
+                                          }
+                                  }
+                               @media all and (max-width:676px)
+                                   {
+                                        .feature
+                                         {
+                                           position:relative;
+                                           top:1100px;
+                                          }
+                                  }
+                   .chef
+                       {
+                            height:100vh;
+                            width:100%;
+                            background:white;
+                            position:relative;
+                            top: 460px;
+                             
+                        }
+                      .chefs
+                      {
+                        position:relative;
+                        top: 130px;
+                        display:flex;
+                        justify-content:space-evenly;
+                        align-items: center;
+                        flex-wrap: wrap;
+                       /* border:1px solid;*/
+                        height:400px;
+                      }
+                      .c1,.c2,.c3,.c4
+                      {
+                      
+                        height:380px;
+                        width:260px;
+                        /*border:1px solid;*/
+                      }
+                      .Cname
+                      {
+                               margin-top: 7px;
+                               text-align: center;
+                               font-family: 'Rubik', sans-serif;  
+                               font-size:20px;
+                      }
+                      .cpara
+                      {
+                        font-family: 'Roboto', sans-serif;
+                        font-size:15px; 
+                        margin-top: 5px;
+                        text-align: center;
+                      }
+                      
+                      .img1
+                      {
+                        transition: 1s;
+                        display: block;
+                        position: relative;
+                      }
+                      .icons1
+                      {
+                        list-style: none;
+                        display:flex;
+                        justify-content: center;
+                        position:relative;
+                        top:110px;
+                        color: #fff;
+                      }
+                      .overlay 
+                      {
+                        background: red;
+                        z-index: 2;
+                        position: relative;
+                        top: -300px;
+                        opacity: 0;
+                        overflow: hidden;
+                        height: 298px;
+                        width: 260px;
+                        
+                      }
+
+                      .overlay:hover
+                      {
+                         cursor:pointer;  
+                         opacity:.3;
+                      }
+                     
+                      
+                      @media all and (max-width:1115px)
+                      {
+                        .chef
+                        {
+                          position: relative;
+                          top: 650px;
+                        }
+                      }
+                      @media all and (max-width:996px)
+                      {
+                        .chef
+                        {
+                          position: relative;
+                          top: 1000px;
+                        }
+                      }
+                      @media all and (max-width:676px)
+                                   {
+                                        .chef
+                                         {
+                                           position:relative;
+                                           top:1400px;
+                                          }
+                                  }
+                      .blog
+                       {
+                            height:100vh;
+                            width:100%;
+                            background:white;
+                            position:relative;
+                            top: 460px;
+                             
+                        }
+                        .blogs
+                      {
+                        position:relative;
+                        top: 130px;
+                        display:flex;
+                        justify-content:space-evenly;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        /*border:1px solid;*/
+                        height:400px;
+                        /*overflow: hidden;*/
+                        flex-wrap: wrap;
+                      }
+                      .b1,.b2,.b3,.b4
+                      {
+                      
+                        height:380px;
+                        width:260px;
+                        /*border:1px solid;*/
+                      }
+                      .bbtn
+                      {
+                        margin-top: 10px;
+                        height:30px;
+                        width: 120px;
+                        color:white;
+                        background: black;
+                        font-family: 'Roboto', sans-serif;
+                      }
+                      .bname
+                             {
+                                margin-top:18px;
+                               font-family: 'Rubik', sans-serif;  
+                               font-size:18px;
+                             }
+                             .bimg
+                             {
+                              
+                              overflow: hidden;
+                              
+                             }
+
+                     /.bimg > img
+                             {
+                               
+                            transition: 1.5s;
+                             } 
+                      .bimg > img:hover
+                             {
+                               
+                               transform:scale(1.3);
+                              }
+                      @media all and (max-width:1115px)
+                      {
+                        .blog
+                        {
+                          position: relative;
+                          top: 650px;
+                        }
+                      }
+                      @media all and (max-width:996px)
+                      {
+                        .blog
+                        {
+                          position: relative;
+                          top: 1330px;
+                        }
+                      }
+                      @media all and (max-width:676px)
+                                   {
+                                        .blog
+                                         {
+                                           position:relative;
+                                           top:1700px;
+                                          }
+                                  }
+                       @media all and (max-width:536px)
+                                   {
+                                        .blog
+                                         {
+                                           position:relative;
+                                           top:2460px;
+                                          }
+                                  }
+                       .contact
+                       {
+                            height:100vh;
+                            width:100%;
+                            background:white;
+                            position:relative;
+                            top: 460px;
+                            
+                            
+                             
+                        }
+                        .container
+                        {
+                          position:relative;
+                          top: 100px;
+                          left:335px;
+                          height: 500px;
+                          width:50%;
+                         border: 1px solid white;
+                         display:flex;
+                         flex-direction:column; 
+                        }
+                        label
+                        {
+                          display: block;
+                          margin: 10px 30px;
+                          padding: 15px;
+                        }
+                        input[type=text],input[type=email]
+                        {
+                            height:35px;
+                            width: 510px;
+                            padding: 5px 20px;
+                            font-family: 'Rubik', sans-serif;
+                            border: 1px solid rgb(185, 177, 177);
+                            border-radius:  10px;
+                        }
+                        textarea
+                        {
+                          border: 1px solid rgb(185, 177, 177);
+                            border-radius:  10px; 
+                        }
+                         .conb
+                         {          
+                                   font-family: 'Rubik', sans-serif; 
+                                   font-size:16px;
+                                   margin-left:45px;
+                                   height:50px;
+                                   width:200px;
+                                   border:none;
+                                   border-radius:50px;
+                                   background:#f76959;
+                                   color:white;
+                                   
+                        }
+                 	 @media all and (max-width:1115px)
+                      {
+                        .contact
+                        {
+                          position: relative;
+                          top: 650px;
+
+                        }
+                        .container
+                        {
+                          position:relative;
+                          left:280px;
+                        }
+                        input[type=text],input[type=email]
+                        {
+                            width: 410px;
+                        }
+                        textarea
+                        {
+                            width: 450px;
+                        }
+                      }
+                      @media all and (max-width:996px)
+                      {
+                        .contact
+                        {
+                          position: relative;
+                          top: 1600px;
+                        }
+                        .container
+                        {
+                          position:relative;
+                          left:250px;
+                        }
+                        input[type=text],input[type=email]
+                        {
+                            width: 400px;
+                        }
+                        textarea
+                        {
+                            width: 440px;
+                        }
+                      }
+                      @media all and (max-width:830px)
+                      {
+                        .container
+                        {
+                          position:relative;
+                          left:200px;
+                        }
+                        input[type=text],input[type=email]
+                        {
+                            width: 350px;
+                        }
+                        textarea
+                        {
+                            width: 390px;
+                        }
+                      }
+                        @media all and (max-width:676px)
+                         {
+                           .contact
+                         {
+                              position:relative;
+                              top:2000px;
+                         }
+                         .container
+                        {
+                          position:relative;
+                          left:150px;
+                        }
+                        input[type=text],input[type=email]
+                        {
+                            width: 300px;
+                        }
+                        textarea
+                        {
+                            width: 340px;
+                        }
+                                  }
+                                  @media all and (max-width:536px)
+                                   {
+                                        .contact
+                                         {
+                                           position:relative;
+                                           top:3500px;
+                                          }
+                                  
+                                  .container
+                        {
+                          position:relative;
+                          left:100px;
+                        }
+                        input[type=text],input[type=email]
+                        {
+                            width: 250px;
+                        }
+                        textarea
+                        {
+                            width: 290px;
+                        }
+                      }
+                      footer
+                      {
+                        height:1000px;
+                        width:100%;
+                        background: #212529;
+                      }
+                      .fone
+                      {
+                        background: rgb(204, 183, 183);
+                        position: relative;
+                        top:500px;
+                      }
+                      .fcontainer
+                      {
+                        position: relative;
+                        top: 525px;
+                        height:250px;
+                        width:100%;
+                        border:1px solid #212529;
+                        display: flex;
+                        justify-content: space-evenly;
+                        padding: 5px;
+                        align-items: center;
+                        flex-wrap: wrap;
+                      }
+                      .foo,.foo1,.foo2
+                      {
+                        border: 1px solid #212529;
+                        height: 200px;
+                        width:400px;
+                      }
+                      .fooh 
+                      {
+                        color: #fff;
+                        font-family: 'Rubik', sans-serif; 
+                        font-size: 25px;
+                      }
+                      .fopara
+                      {
+                        margin-top: 15px;
+                        width:75%;
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 15px;
+                        color: #777;
+                      }
+                      .no
+                      {
+                        margin-top: 20px; 
+                        font-size: 30px;
+                        color:#f76959;
+                        font-family: 'Rubik', sans-serif; 
+                      }
+                      .no1
+                      {
+                        font-size: 30px;
+                        color:#f76959;
+                        font-family: 'Rubik', sans-serif; 
+                      }
+                      input[type=name]
+                      {
+                        height:25px;
+                        padding: 5px;
+                        width:60%;
+                        border: none;
+                        border-radius:50px;
+                      } 
+                      .go
+                      {
+                        height:35px;
+                        padding: 5px;
+                        width:20%;
+                        border: none;
+                        margin-top: 20px;
+                        border-radius:50px;
+                        margin-left: -30px;
+                        background: #f76959;
+                      }
+                      .fcontainer1
+                      {
+                        position: relative;
+                        top: 555px;
+                        height:100px;
+                        width:100%;
+                        border:none;
+                        display: flex;
+                        justify-content: space-evenly;
+                        padding: 5px;
+                        align-items: center;
+                        flex-wrap: wrap;
+                      }
+                      .foo3
+                      {
+                        border: none;
+                        height: 80px;
+                        width:650px;
+                      }
+                      .foo4
+                      {
+                        border: none;
+                        height: 80px;
+                        width:500px;
+                        display: flex;
+                        justify-content: space-evenly;
+                         align-items: center;
+                      }
+                      .fopara1
+                      {
+                        margin-top: 26px;
+                        width:100%;
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 15px;
+                        color: #777;
+                      }
+                      .icons
+                      {
+                        list-style: none;
+                        display: flex;
+                      
+                       align-items: center;
+                       
+                      }
+                      .icons li
+                      {
+                        border:none;
+                        height:20px;
+                        width:18px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 10px;
+                        color:white;
+                        background: black;
+                      }
+                      .icons li:hover
+                      {
+                        color:black;
+                        background: white;
+                      }   
+                      @media all and (max-width:1115px)     
+                      {
+                        footer
+                        {
+                          height: 1500px;
+                          flex-direction:column;
+                        }
+                        .fcontainer
+                        {
+                          position: relative;
+                          top:750px;
+                        }
+                        .fcontainer1
+                        {
+                          position: relative;
+                          top:900px;
+                        }
+                      }  
+                      @media all and (max-width:996px)
+                      {
+                        footer
+                        {
+                          position: relative;
+                          top:1600px;
+                          height: 700px;
+                        }
+                        .fcontainer
+                        {
+                          position: relative;
+                          top:80px;
+                        }
+                        .fcontainer1
+                        {
+                          position: relative;
+                          top:230px;
+                        }
+                      }   
+                      @media all and (max-width:820px) 
+                      {
+                        footer
+                        {
+                         height: 900px;
+                        }
+                        .fcontainer1
+                        {
+                          position: relative;
+                          top:400px;
+                        }
+                      } 
+                      @media all and (max-width:676px)
+                         {
+                           footer
+                         {
+                              position:relative;
+                              top:2000px;
+                         }
+                        }
+                        @media all and (max-width:536px)
+                                   {
+                                        footer
+                                         {
+                                           position:relative;
+                                           top:3500px;
+                                          }
+                                        }
+               </style>
+                   
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Lobster&family=Rubik:wght@500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Rubik:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+<header>
+              <div id="logo">
+                    <img src="img/logo.webp" >
+               </div>
+     <nav>   
+                <ul>
+                 <li><a href="#home">HOME</a></li>
+                 <li><a href="#dish">DISH</a></li>
+                 <li><a href="#chef">CHEFS</a></li>
+                 <li><a href="#blog">BLOG</a></li>
+                 <li><a href="#contact">CONTACT</a></li>
+                </ul>
+     </nav>
+</header>
+<section  id="home" class="home">
+             <div  class="welcome">
+                  <span class="line1">
+                 <h4>WIDE OPTIONS OF CHOICE</h4>
+                  </span>
+                    <span class="line2">
+                 <h1>Delicious Receipes</h1>
+                  </span>
+                  <span class="line3">
+                 <p>A restaurant is a place where people visit to eat and drink the food being prepared on the premises and pays for the same. </p>
+                  </span>
+                            <button class="line4">CHECK OUR MENU</button>
+             </div>
+</section>
+<section id="dish" class="dish">
+            <div class="dish_article">
+                    <h1 class="main">Our Top Rated Dishes</h1>
+                    <span class="main1">Who are in extremely love with eco friendly system.</span>
+            </div>
+            <div class="items">
+               <div class="one">
+                 <span class="d1" ><img src="img/d1.webp" width="100%" ></span>
+                 <h2 class="dname">BREAD FRUIT CHEESE SANDWICH</h2>
+                 <p class="dpara">inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.</p>
+               </div>
+               <div class="two">
+               <span class="d1" ><img src="img/d2.webp" width="100%" ></span>
+                  <h2 class="dname">BEEF CUTLET WITH SPRING ONION</h2>
+                  <p class="dpara">inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.</p>
+               </div>
+               <div class="thr">
+               <span class="d1" ><img src="img/d3.webp" width="100%" ></span>
+                  <h2 class="dname">MEAT WITH SAUCE & VEGETABLES</h2>
+                  <p class="dpara">inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.</p>
+               </div>
+            </div>
+            <div class="youtube"> 
+            <span class="play"><a href="https://www.youtube.com"><img src="img/play.webp"></a></span> 
+               <h2 class="play_name">We Always serve the vaping hot and delicious foods</h2>
+               <p class="play_para">Youtube video will appear in popover.</p>
+           </div>
+           <div class="time">
+           <span class="t1">
+                   <img src="img/f1.webp" >
+                                     <h3 class="fname">Refreshing Breakfast</h3>
+<p class="dpara">Lorem ipsum dolor sit ametcons ecteturadipis icing elit.</p>
+           </span>
+           <span class="t2">
+<img src="img/f2.webp" >
+<h3 class="fname">Awesome Lunch</h3>
+<p class="dpara">Lorem ipsum dolor sit ametcons ecteturadipis icing elit.</p>
+</span>
+           <span class="t3">
+<img src="img/f3.webp" >
+<h3 class="fname">Soothing Dinner</h3>
+<p class="dpara">Lorem ipsum dolor sit ametcons ecteturadipis icing elit.</p>
+</span>  
+           <span class="t4">
+<img src="img/f4.webp" >
+<h3 class="fname">Rich Quality Buffet</h3>
+<p class="dpara">Lorem ipsum dolor sit ametcons ecteturadipis icing elit.</p>
+</span></div>
+               <div class="feature">
+                                       <div class="feature_article">
+                                       <h1 class="top">Our Top Rated Dishes</h1>
+                                        </div>
+                                        <div class="fer">
+                                       <span class="fer1">
+                                          <h2 class="sname">Fresh & Crispy All the time</h2>
+                                           <p class="spara"> 
+Who are in extremely love with eco friendly system. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</p>
+                            <button class="sbutton">VIEW FULL MENU</button>
+                                       </span>
+                                       <span class="fer2"> <img src="img/s1.webp" ></span>
+                                       </div>
+               </div>
+          
+</section>
+<section id="chef" class="chef">
+<div class="dish_article">
+     <h1 class="main">Meet Our Qualified Chefs</h1>
+     <span class="main1">Who are in extremely love with eco friendly system.</span>
+</div>
+<div class="chefs">
+  <div class="c1">
+  <img src="img/c1.webp" width="100%" class="img1"><div class="overlay"><ul class="icons1">
+    <li> <svg width="27" height="27" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+    </svg></li>
+    <li><svg width="27" height="27" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+      <path d="M17.5 6.5h.01"></path>
+    </svg></li>
+    <li><svg width="27" height="27" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5 0-.278-.028-.556-.08-.83A7.72 7.72 0 0 0 23 3Z"></path>
+    </svg></li>
+    
+  </ul></div>
+    <h2 class="Cname">Ethel Davis</h2>
+    <p class="cpara">Managing Director (Sales)</p></div>
+  <div class="c2"><img src="img/c2.jpg" width="100%" ><span class="img1"></span><div class="overlay"><ul class="icons1">
+    <li> <svg width="27" height="27" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+    </svg></li>
+    <li><svg width="27" height="27" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+      <path d="M17.5 6.5h.01"></path>
+    </svg></li>
+    <li><svg width="27" height="27" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5 0-.278-.028-.556-.08-.83A7.72 7.72 0 0 0 23 3Z"></path>
+    </svg></li></div>
+    <h2 class="Cname">Rodney Cooper</h2>
+    <p class="cpara">Creative Art Director (Project)</p></div>
+  <div class="c3"><img src="img/c3.jpg" width="100%" ><span class="img1"></span><div class="overlay"><ul class="icons1">
+    <li> <svg width="27" height="27" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+    </svg></li>
+    <li><svg width="27" height="27" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+      <path d="M17.5 6.5h.01"></path>
+    </svg></li>
+    <li><svg width="27" height="27" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5 0-.278-.028-.556-.08-.83A7.72 7.72 0 0 0 23 3Z"></path>
+    </svg></li></div>
+    <h2 class="Cname">Dora Walker</h2>
+    <p class="cpara">Senior Core Developer</p></div>
+  <div class="c4"><img src="img/c4.jpg" width="100%" ><span class="img1"></span><div class="overlay"><ul class="icons1">
+    <li> <svg width="27" height="27" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+    </svg></li>
+    <li><svg width="27" height="27" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+      <path d="M17.5 6.5h.01"></path>
+    </svg></li>
+    <li><svg width="27" height="27" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5 0-.278-.028-.556-.08-.83A7.72 7.72 0 0 0 23 3Z"></path>
+    </svg></li></div>
+    <h2 class="Cname">Lena Keller</h2>
+    <p class="cpara">Creative Content Developer)</p></div>
+
+</div>
+</section>
+<section id="blog" class="blog">
+  <div class="dish_article">
+    <h1 class="main">Latest From Our Blog</h1>
+    <span class="main1">Who are in extremely love with eco friendly system.</span>
+</div>
+<div class="blogs">
+  <div class="b1">
+    <div class="bimg"><img src="img/b1.webp" width="100%" ></div>
+    <button class="bbtn">10 Jan 2018</button>
+    <h2 class="bname">Cooking Perfect Fried Rice in minutes</h2>
+    <p class="dpara">inappropriate behavior ipsum dolor sit amet, consectetur.</p>
+  </div>
+  <div class="b2">
+    <div class="bimg"><img src="img/b2.webp" width="100%" ></div>
+    <button class="bbtn">10 Jan 2018</button>
+    <h2 class="bname">Secret of making Heart Shaped eggs</h2>
+    <p class="dpara">inappropriate behavior ipsum dolor sit amet, consectetur.</p>
+  </div>
+  <div class="b3">
+    <div class="bimg"><img src="img/b3.webp" width="100%" ></div>
+    <button class="bbtn">10 Jan 2018</button>
+    <h2 class="bname">How to check steak if it is tender or not</h2>
+    <p class="dpara">inappropriate behavior ipsum dolor sit amet, consectetur.</p>
+  </div>
+  <div class="b4">
+    <div class="bimg"><img src="img/b4.webp" width="100%" ></div>
+    <button class="bbtn">10 Jan 2018</button>
+    <h2 class="bname">Addiction When Gambling Becomes A Problem</h2>
+    <p class="dpara">inappropriate behavior ipsum dolor sit amet, consectetur.</p>
+  </div>
+
+</div>
+</section>
+<section id="contact" class="contact">
+  <div class="dish_article">
+    <h1 class="main">Contact Us</h1>
+</div>
+<div class="container">
+    <label><input type="text" name=" " placeholder="Enter Your Name"></label>
+    <label><input type="email" name=" " placeholder="Enter Your Email Address"></label> 
+    <label><textarea rows="10" cols="73.5"></textarea></label>
+     <button class="conb">SEND MESSAGE</button>
+</div>
+</section>
+<footer>
+  <div class="fcontainer">
+    <span class="foo">
+      <h3 class="fooh">About Us</h3>
+      <p class="fopara">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
+    </span>
+    <span class="foo1"> 
+      <h3 class="fooh">Contact Us</h3>
+      <p class="fopara">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua</p>
+      <p class="no">012-6532-568-9746</p>
+      <p class="no1"> 012-6532-569-9748</p>
+    </span>
+    <span class="foo2">
+       <h3 class="fooh">News letter</h3>
+       <p class="fopara">You can trust us. we only send offers, not a single spam.</p>
+       <input type="name" name=" " placeholder="Enter Your Name"> <button class="go">send</button>
+      </span>
+</div>
+<div class="fcontainer1">
+  <span class="foo3"><p class="fopara1">Copyright ©2023 All rights reserved | This template is made with  by Sabarish</p></span>
+  <span class="foo4">
+    <ul class="icons">
+      <li> <svg width="27" height="27" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+      </svg></li>
+      <li><svg width="27" height="27" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+        <path d="M17.5 6.5h.01"></path>
+      </svg></li>
+      <li><svg width="27" height="27" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5 0-.278-.028-.556-.08-.83A7.72 7.72 0 0 0 23 3Z"></path>
+      </svg></li>
+      <li><svg width="27" height="27" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="m15 10-4 4 6 6 4-16-18 7 4 2 2 6 3-4"></path>
+      </svg></li>
+    </ul>
+  </span>
+</div>
+</footer>
+
+    </body>
+</html>
